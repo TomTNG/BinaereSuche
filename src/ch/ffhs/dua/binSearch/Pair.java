@@ -1,13 +1,13 @@
 package ch.ffhs.dua.binSearch;
 
 /**
- * Einfache Klasse fÃ¼r ein Paar von zwei int-Werten.
+ * Einfache Klasse fuer ein Paar von zwei int-Werten.
  */
 public class Pair 
 {
 	public int lower;
 	public int higher;
-	
+//Eine Setter methode?	
 	public Pair(int lower, int higher)
 	{
 		this.lower = lower;
@@ -15,16 +15,20 @@ public class Pair
 	}
 
 	// Generiert duch eclipse
+	
 	@Override
 	public int hashCode() {
 		final int prime = 101;
 		int result = 1;
+		//101*1 + higher
 		result = prime * result + higher;
+		//101*result + lower
 		result = prime * result + lower;
 		return result;
 	}
 
 	@Override
+	//Die equals Methode wird überschrieben (geerbt von der Objektklasse)
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
